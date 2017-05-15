@@ -35,6 +35,8 @@ var replaceReg = /(\s*)<\!\-\-include\s+"([^"]+)"(:"([^"]+)")*\-\->/ig;
 
 module.exports = replaceMod;
 
+module.exports.buildHtml=contentHandle;
+
 function contentHandle(contents,options){
     
     contents=tplsBuild.buildHtml(options.tplsPath,contents);
